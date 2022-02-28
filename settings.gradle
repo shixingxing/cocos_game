@@ -12,8 +12,8 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-include ':libcocos',':libservice'
-project(':libcocos').projectDir     = new File('libcocos2dx')
+include ':libcocos', ':libservice'
+project(':libcocos').projectDir = new File('libcocos2dx')
 
 rootProject.name = "CocosGame"
 include ':app'

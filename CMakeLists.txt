@@ -17,9 +17,9 @@ set(PROJ_SOURCES
 
 # -------------- SRART ---------------
 # USED BY COCOS SERVICE, DON'T REMOVE!
-if (EXISTS ${RES_DIR}/proj/service.cmake)
+if (EXISTS ${RES_DIR}/service.cmake)
     set(SERVICE_NATIVE_DIR ${CMAKE_CURRENT_LIST_DIR})
-    include(${RES_DIR}/proj/service.cmake)
+    include(${RES_DIR}/service.cmake)
 endif ()
 # --------------  END ----------------
 

@@ -4,9 +4,8 @@ plugins {
 }
 
 def RES_PATH = project.rootDir
-//RES_PATH = RES_PATH.replace("\\", "/")
 COCOS_ENGINE_PATH = COCOS_ENGINE_PATH.replace("\\", "/")
-buildDir = "${RES_PATH}/proj/build/$project.name"
+//buildDir = "${RES_PATH}/proj/build/$project.name"
 
 android {
     compileSdk 32
@@ -30,13 +29,12 @@ android {
                 cppFlags "-frtti -fexceptions -fsigned-char -DANDROID_INSTANT=1"
             }
         }
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     externalNativeBuild {
         cmake {
             path "../CMakeLists.txt"
-            buildStagingDirectory "${RES_PATH}/proj/build"
+//            buildStagingDirectory "${RES_PATH}/proj/build"
         }
     }
 
@@ -69,7 +67,4 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.4.1'
     implementation 'androidx.navigation:navigation-ui-ktx:2.4.1'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 }

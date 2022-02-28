@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.toolbar)
 
-        binding.fab.setOnClickListener { view ->
+        binding.fab.setOnClickListener {
             startActivity(Intent().apply { setClass(this@MainActivity, CocosGameActivity::class.java) })
         }
     }
